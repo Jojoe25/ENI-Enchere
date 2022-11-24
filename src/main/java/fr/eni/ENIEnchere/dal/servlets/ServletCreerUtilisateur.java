@@ -35,8 +35,8 @@ public class ServletCreerUtilisateur extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
         String pseudo,  nom,  prenom,  email,  telephone,  rue, code_postal, ville, mot_de_passe;
-        int credit;
-        boolean administrateur;
+        int credit = 0;
+        boolean administrateur = false;
         Utilisateur u;
         pseudo=request.getParameter("pseudo");
         nom=request.getParameter("nom");
@@ -44,14 +44,14 @@ public class ServletCreerUtilisateur extends HttpServlet {
         email=request.getParameter("email");
         telephone=request.getParameter("telephone");
         rue=request.getParameter("rue");
-        code_postal=request.getParameter("codePostal");
+        code_postal=request.getParameter("code_postal");
         ville=request.getParameter("ville");
-        mot_de_passe=request.getParameter("motDePasse");
-
+        mot_de_passe=request.getParameter("mot_de_passe");
+        
         
         u=new Utilisateur( pseudo,  nom,  prenom,  email,  telephone,  rue, code_postal, ville, mot_de_passe, credit, administrateur);
         try {
-            FormulaireMananger.getInstance().insert(u);
+            FormulaireMananger.getInstance().ajouterUtilisateur(u);
         } catch (BusinessException e) {
             e.printStackTrace();
         }
