@@ -6,14 +6,24 @@ import fr.eni.ENIEnchere.dal.FormulaireDAO;
 import fr.eni.ENIEnchere.bo.Utilisateur;
 
 public class FormulaireMananger {
+	private static FormulaireMananger instance = null;
+	private FormulaireDAO form;
+	public static FormulaireMananger getInstance() {
+		if (instance == null) {
+			instance = new FormulaireMananger();
+		}
+		return instance;
+	 }
+
 	
-	private FormulaireDAO formulaireDAO;
-	
-	public void FormulaireManager() {
-		this.formulaireDAO = DAOFactory.getFormulaireDAO();
+	private FormulaireMananger() {
+		this.form = DAOFactory.getFormulaireDAO();
 	}
 	
-	public Utilisateur ajouter(String pseudo, String nom, String prenom, String email, String telephone, String rue, String code_postal, String ville, String mot_de_passe) throws BusinessException {
+	public void  ajouterUtilisateur (Utilisateur utilisateur) throws BusinessException {
+		form.insert(utilisateur);}
+	
+	public Utilisateur ajouter(String pseudo, String nom, String prenom, String email, String telephone, String rue, String code_postal, String ville, String mot_de_passe,int credit,boolean administrateur) throws BusinessException {
 		
 		BusinessException exception = new BusinessException();
 		
@@ -30,7 +40,7 @@ public class FormulaireMananger {
 		this.validerMotDePasse(formulaire, exception);
 		
 		if(!exception.hasErreurs()) {
-			this.formulaireDAO.insert(formulaire);
+			form.insert(formulaire);
 		}
 		else {
 			throw exception;
@@ -109,6 +119,12 @@ public class FormulaireMananger {
 			throw be;
 		}
 	}
+
 	
 	
-}
+	}
+	/**
+	 * test de merde de maere la bite
+	 */
+	
+

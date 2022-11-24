@@ -4,7 +4,9 @@ package fr.eni.ENIEnchere.bll;
  * Les codes disponibles sont entre 20000 et 29999
  */
 public abstract class CodesResultatBLL {
+	public static final int INSERT_OBJET_ECHEC=10000;
 	
+	public static final int INSERT_OBJET_NULL=10000;
 	/**
 	 * Echec le nom de l'article ne respecte pas les règles définies
 	 */
