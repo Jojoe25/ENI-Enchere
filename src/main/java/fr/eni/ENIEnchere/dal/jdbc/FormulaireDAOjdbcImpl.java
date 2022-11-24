@@ -11,7 +11,7 @@ import fr.eni.ENIEnchere.dal.ConnectionProvider;
 import fr.eni.ENIEnchere.dal.FormulaireDAO;
 
 public class FormulaireDAOjdbcImpl implements FormulaireDAO{
-	private static final String INSERT_UTILISATEUR="INSERT INTO INSERT into UTILISATEUR ( pseudo,  nom,  prenom,  email,  telephone,  rue, codePostal,ville, motDePasse, credit, administrateur) values(?,?,?,?,?,?,?,?,?,100,false);";
+	private static final String INSERT_UTILISATEUR="INSERT INTO UTILISATEUR ( pseudo,  nom,  prenom,  email,  telephone,  rue, code_postal,ville, mot_de_passe, credit, administrateur) values(?,?,?,?,?,?,?,?,?,100,false);";
 
 @Override
 public void insert(Utilisateur utilisateur)throws BusinessException{
