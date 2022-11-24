@@ -13,7 +13,7 @@ import fr.eni.ENIEnchere.bll.UtilisateurManager;
 
 @WebServlet("/seconnecter")
 public class ServletSeConnecter extends HttpServlet {
-    private static final long serialVersionUID = 11;
+    private static final long serialVersionUID = 1l;
     public ServletSeConnecter(){
 
     }

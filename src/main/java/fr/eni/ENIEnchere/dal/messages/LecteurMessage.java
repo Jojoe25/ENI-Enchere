@@ -14,7 +14,7 @@ public class LecteurMessage {
 	{
 		try
 		{
-			rb = ResourceBundle.getBundle("fr.eni.EnchereEtEnOs.messages.messages_erreur");
+			rb = ResourceBundle.getBundle("fr.eni.ENIEnchere.dal.messages.messages_erreur");
 		}
 		catch (Exception e) 
 		{
@@ -22,10 +22,6 @@ public class LecteurMessage {
 		}
 	}
 	
-	private LecteurMessage()
-	{
-		
-	}
 	/**
 	 * @param code
 	 * @return
@@ -48,7 +44,6 @@ public class LecteurMessage {
 			e.printStackTrace();
 			message="Une erreur inconnue est survenue";
 		}
-		System.out.println("message="+message);
 		return message;
 	}
 }
