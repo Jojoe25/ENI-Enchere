@@ -120,4 +120,5 @@ public class ArticleVendusManager {
 			throw be;
 		}
 	}
+	
 }
