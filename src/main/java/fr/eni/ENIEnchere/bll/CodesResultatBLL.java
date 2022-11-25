@@ -51,6 +51,42 @@ public abstract class CodesResultatBLL {
 	 * Echec le champ 'mot de passe' n'est pas valide
 	 */
 	public static final int REGLE_UTILISATEUR_MOTDEPASSE_ERREUR = 20010;
+	/**
+	 * Echec le champ 'numéro de catégorie' n'est pas valide
+	 */
+	public static final int REGLE_ARTICLEVENDUS_NO_CATEGORIE_ERREUR = 20011;
+	/**
+	 * Echec le champ 'numéro d'utilisateur' n'est pas valide
+	 */
+	public static final int REGLE_ARTICLEVENDUS_NO_UTILISATEUR_ERREUR = 20012;
+	/**
+	 * Echec le champ 'date de fin' n'est pas valide
+	 */
+	public static final int REGLE_ARTICLEVENDUS_DATE_FIN_ENCHERES_ERREUR = 20013;
+	/**
+	 * Echec le champ 'date de début' n'est pas valide
+	 */
+	public static final int REGLE_ARTICLEVENDUS_DATE_DEBUT_ENCHERES_ERREUR = 20014;
+	/**
+	 * Echec le champ 'description de l'article' n'est pas valide
+	 */
+	public static final int REGLE_ARTICLEVENDUS_DESCRIPTION_ERREUR = 20015;
+	/**
+	 * Echec le champ 'nom de l'article' n'est pas valide
+	 */
+	public static final int REGLE_ARTICLEVENDUS_NOM_ARTICLE_ERREUR = 20016;
+	/**
+	 * Echec le champ 'prix de vente' n'est pas valide
+	 */
+	public static final int REGLE_ARTICLEVENDUS_PRIX_VENTE_ERREUR = 20017;
+	/**
+	 * Echec le champ 'prix initial' n'est pas valide
+	 */
+	public static final int REGLE_ARTICLEVENDUS_PRIX_INITIAL_ERREUR = 20018;
+	
+	
+	
+	
 	
 	
 	
