@@ -27,10 +27,10 @@ public class ArticleVendusDAOJdbcImpl implements ArticleVendusDAO {
 		pstmt.setString(2, articlevendus.getDescription());
 		pstmt.setString(3, articlevendus.getDate_debut_encheres());
 		pstmt.setString(4, articlevendus.getDate_fin_encheres());
-		pstmt.setInt(5, articlevendus.getPrix_initial());
-		pstmt.setInt(6, articlevendus.getNo_utilisateur());
-		pstmt.setInt(7, articlevendus.getNo_categorie());
-		pstmt.setInt(8, articlevendus.getPrix_vente());
+		pstmt.setString(5, articlevendus.getPrix_initial());
+		pstmt.setString(6, articlevendus.getNo_utilisateur());
+		pstmt.setString(7, articlevendus.getNo_categorie());
+		pstmt.setString(8, articlevendus.getPrix_vente());
 
 		pstmt.executeUpdate();
 		ResultSet rs = pstmt.getGeneratedKeys();
