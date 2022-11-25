@@ -31,7 +31,7 @@ public class Utilisateur {
 		this.administrateur = administrateur;
 	}
 	public Utilisateur( String pseudo, String nom, String prenom, String email, String telephone,
-			String rue, String codePostal, String ville, String mot_de_passe, String code_postal) {
+			String rue, String code_postal, String ville, String mot_de_passe) {
 		this.pseudo = pseudo;
 		this.nom = nom;
 		this.prenom = prenom;
