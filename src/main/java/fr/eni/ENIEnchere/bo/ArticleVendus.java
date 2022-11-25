@@ -6,12 +6,12 @@ public class ArticleVendus {
 	private String description;
 	private	String date_debut_encheres;
 	private	String date_fin_encheres;
-	private	Integer prix_initial;
-	private	Integer prix_vente;
-	private	Integer no_utilisateur;
-	private	Integer no_categorie;
+	private	String prix_initial;
+	private	String prix_vente;
+	private	String no_utilisateur;
+	private	String no_categorie;
 	
-	public ArticleVendus(Integer no_article, String	nom_article, String description, String date_debut_encheres, String date_fin_encheres, Integer prix_initial, Integer prix_vente, Integer no_utilisateur, Integer no_categorie) {
+	public ArticleVendus(Integer no_article, String	nom_article, String description, String date_debut_encheres, String date_fin_encheres, String prix_initial, String prix_vente, String no_utilisateur, String no_categorie) {
 		super();
 		this.no_article = no_article;
 		this.nom_article = nom_article;
@@ -23,7 +23,7 @@ public class ArticleVendus {
 		this.no_utilisateur = no_utilisateur;
 		this.no_categorie = no_categorie;
 	}
-	public ArticleVendus(String	nom_article, String description, String date_debut_encheres, String date_fin_encheres, Integer prix_initial, Integer prix_vente, Integer no_utilisateur, Integer no_categorie) {
+	public ArticleVendus(String	nom_article, String description, String date_debut_encheres, String date_fin_encheres, String prix_initial, String prix_vente, String no_utilisateur, String no_categorie) {
 		super();
 		this.nom_article = nom_article;
 		this.description = description;
@@ -64,28 +64,28 @@ public class ArticleVendus {
 	public void setDate_fin_encheres(String date_fin_encheres) {
 		this.date_fin_encheres = date_fin_encheres;
 	}
-	public Integer getPrix_initial() {
+	public String getPrix_initial() {
 		return prix_initial;
 	}
-	public void setPrix_initial(Integer prix_initial) {
+	public void setPrix_initial(String prix_initial) {
 		this.prix_initial = prix_initial;
 	}
-	public Integer getPrix_vente() {
+	public String getPrix_vente() {
 		return prix_vente;
 	}
-	public void setPrix_vente(Integer prix_vente) {
+	public void setPrix_vente(String prix_vente) {
 		this.prix_vente = prix_vente;
 	}
-	public Integer getNo_utilisateur() {
+	public String getNo_utilisateur() {
 		return no_utilisateur;
 	}
-	public void setNo_utilisateur(Integer no_utilisateur) {
+	public void setNo_utilisateur(String no_utilisateur) {
 		this.no_utilisateur = no_utilisateur;
 	}
-	public Integer getNo_categorie() {
+	public String getNo_categorie() {
 		return no_categorie;
 	}
-	public void setNo_categorie(Integer no_categorie) {
+	public void setNo_categorie(String no_categorie) {
 		this.no_categorie = no_categorie;
 	}
 }
