@@ -23,7 +23,7 @@
 			</div>
 		</c:if>
 
-		<label for="login">Identifiant (mail or pseudo)</label> <input type="text" id="login" name="login" />
+		<label for="login">Identifiant (mail ou pseudo)</label> <input type="text" id="login" name="login" />
 		<label for="mdp">mot de passe</label> <input type="password" id="mdp" name="mdp" />
 
 		<button type="submit">se connecter</button>

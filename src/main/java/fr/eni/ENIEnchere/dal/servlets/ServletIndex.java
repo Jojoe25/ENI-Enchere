@@ -7,6 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import fr.eni.ENIEnchere.BusinessException;
+import fr.eni.ENIEnchere.bll.UtilisateurManager;
+
 /**
  * Servlet implementation class ServletIndex
  */
@@ -25,8 +28,20 @@ public class ServletIndex extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doGet(request, response);
-	}
-
+    
+    /*
+     * Servlet pour l'ajout de se connecter sur la page index.
+     */
+    
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
+        String identifiant = request.getParameter("login");
+        String mdp = request.getParameter("mdp");
+        try {
+            UtilisateurManager.getInstance().seConnecter(identifiant,mdp);
+            response.sendRedirect("/index.html");
+        } catch (BusinessException e) {
+            request.setAttribute("listeCodesErreur", e.getListeCodesErreur());
+            request.getRequestDispatcher("WEB-INF/jsp/seconnecter.jsp").forward(request, response);
+        }  
+    }
 }
