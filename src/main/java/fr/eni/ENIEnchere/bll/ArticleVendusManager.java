@@ -48,4 +48,77 @@ public class ArticleVendusManager {
 		}
 		return articlevendus;
 	}
+
+
+	private void validerNo_categorie(ArticleVendus articlevendus, BusinessException exception) throws BusinessException {
+		if(articlevendus.getNo_categorie()== null) {
+			BusinessException be = new BusinessException();
+			be.ajouterErreur(CodesResultatBLL.REGLE_ARTICLEVENDUS_NO_CATEGORIE_ERREUR);
+			throw be;
+		}
+	}
+
+
+	private void validerNo_utilisateur(ArticleVendus articlevendus, BusinessException exception) throws BusinessException {
+		if(articlevendus.getNo_utilisateur()== null) {
+			BusinessException be = new BusinessException();
+			be.ajouterErreur(CodesResultatBLL.REGLE_ARTICLEVENDUS_NO_UTILISATEUR_ERREUR);
+			throw be;
+		}
+	}
+
+
+	private void validerPrix_vente(ArticleVendus articlevendus, BusinessException exception) throws BusinessException {
+		if(articlevendus.getPrix_vente()== null) {
+			BusinessException be = new BusinessException();
+			be.ajouterErreur(CodesResultatBLL.REGLE_ARTICLEVENDUS_PRIX_VENTE_ERREUR);
+			throw be;
+		}
+	}
+
+
+	private void validerPrix_initial(ArticleVendus articlevendus, BusinessException exception) throws BusinessException {
+		if(articlevendus.getPrix_initial()== null) {
+			BusinessException be = new BusinessException();
+			be.ajouterErreur(CodesResultatBLL.REGLE_ARTICLEVENDUS_PRIX_INITIAL_ERREUR);
+			throw be;
+		}
+	}
+
+
+	private void validerDate_fin_encheres(ArticleVendus articlevendus, BusinessException exception) throws BusinessException {
+		if(articlevendus.getDate_fin_encheres()== null) {
+			BusinessException be = new BusinessException();
+			be.ajouterErreur(CodesResultatBLL.REGLE_ARTICLEVENDUS_DATE_FIN_ENCHERES_ERREUR);
+			throw be;
+		}
+	}
+
+
+	private void validerDate_debut_encheres(ArticleVendus articlevendus, BusinessException exception) throws BusinessException {
+		if(articlevendus.getDate_debut_encheres()== null) {
+			BusinessException be = new BusinessException();
+			be.ajouterErreur(CodesResultatBLL.REGLE_ARTICLEVENDUS_DATE_DEBUT_ENCHERES_ERREUR);
+			throw be;
+		}
+	}
+
+
+	private void validerDescription(ArticleVendus articlevendus, BusinessException exception) throws BusinessException {
+		if(articlevendus.getDescription()== null || articlevendus.getDescription().length() > 300) {
+			BusinessException be = new BusinessException();
+			be.ajouterErreur(CodesResultatBLL.REGLE_ARTICLEVENDUS_DESCRIPTION_ERREUR);
+			throw be;
+		}
+	}
+
+
+	private void validerNom_article(ArticleVendus articlevendus, BusinessException exception) throws BusinessException {
+		if(articlevendus.getNom_article()== null || articlevendus.getNom_article().length() > 30) {
+			BusinessException be = new BusinessException();
+			be.ajouterErreur(CodesResultatBLL.REGLE_ARTICLEVENDUS_NOM_ARTICLE_ERREUR);
+			throw be;
+		}
+	}
+	
 }
