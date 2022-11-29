@@ -1,5 +1,8 @@
 package fr.eni.ENIEnchere.bll;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 import fr.eni.ENIEnchere.BusinessException;
 import fr.eni.ENIEnchere.bo.ArticleVendus;
 import fr.eni.ENIEnchere.bo.Utilisateur;
@@ -22,10 +25,10 @@ public class ArticleVendusManager {
 		this.article = DAOFactory.getArticleVendusDAO();
 	}
 	
-	public void  ajouterUtilisateur (ArticleVendus articlevendus) throws BusinessException {
+	public void  ajouterArticleVendus (ArticleVendus articlevendus) throws BusinessException {
 		article.insert(articlevendus);}
 	
-	public ArticleVendus ajouter(String	nom_article, String description, String date_debut_encheres, String date_fin_encheres, Integer prix_initial, Integer prix_vente, Integer no_utilisateur, Integer no_categorie) throws BusinessException {
+	public ArticleVendus ajouter(String	nom_article, String description,LocalDate date_debut_encheres,LocalDate date_fin_encheres, Integer prix_initial, Integer prix_vente, Integer no_utilisateur, Integer no_categorie) throws BusinessException {
 		
 		BusinessException exception = new BusinessException();
 		

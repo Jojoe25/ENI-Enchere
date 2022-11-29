@@ -29,10 +29,10 @@
         <label for="no_categorie">Selectionnez une catégorie:</label>
         <name="no_categorie" id="no_categorie" required>
         <select name="no_categorie">
-            <option value="Confirmé" input type="text" value ="1">Informatique</option>
-            <option value="Professionnel" input type="text" value ="2">Ameublement</option>
-            <option value="Débutant" input type="text" value ="3">Vêtement</option>
-            <option value="Débutant" input type="text" value ="4">Sport & loisirs</option>
+            <option input type="number" value ="1">Informatique</option>
+            <option input type="number" value ="2">Ameublement</option>
+            <option input type="number" value ="3">Vêtement</option>
+            <option input type="number" value ="4">Sport & loisirs</option>
         </select>
     </p>
 
