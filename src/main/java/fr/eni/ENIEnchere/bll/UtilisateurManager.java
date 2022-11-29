@@ -32,4 +32,9 @@ public class UtilisateurManager {
 		}
 		return user;
 	}
+
+	public Utilisateur afficherUtilisateur(String pseudo) throws BusinessException {
+		return utilisateurDAO.getUtilisateurByPseudo(pseudo);
+		
+	}
 }

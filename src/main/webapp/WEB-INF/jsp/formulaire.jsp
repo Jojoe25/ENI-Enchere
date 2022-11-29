@@ -13,7 +13,7 @@
 
 <body>
 
-<form action="ServletCreerUtilisateur" method="POST">
+<form action="newuser" method="POST">
 
  <p>
 	<label for="pseudo">Pseudo : </label>
