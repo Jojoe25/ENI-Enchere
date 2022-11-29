@@ -2,6 +2,7 @@ package fr.eni.ENIEnchere.dal;
 
 import fr.eni.ENIEnchere.dal.jdbc.UtilisateurDAOJdbcImpl;
 import fr.eni.ENIEnchere.dal.jdbc.ArticleVendusDAOJdbcImpl;
+import fr.eni.ENIEnchere.dal.jdbc.CategorieDAOJdbcImpl;
 import fr.eni.ENIEnchere.dal.jdbc.FormulaireDAOjdbcImpl;
 public abstract class DAOFactory {
 	
@@ -17,6 +18,11 @@ public abstract class DAOFactory {
 	{
 		return new ArticleVendusDAOJdbcImpl();
 	}
+	public static CategoriesDAO getCategoriesDAO()
+	{
+		return new CategorieDAOJdbcImpl();
+	}
+	
 	
 }
 	
