@@ -1,20 +1,28 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page import="fr.eni.ENIEnchere.bo.Utilisateur"%>
+
 <!DOCTYPE html>
 <html>
 <head>
-<title>Enchere et en os !</title>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Enchere et en os !</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
    <h1 class="display-1 text-center">ENCHERE ET EN OS</h1>
     
-    <form method="post">
+    <c:if test="${ !empty sessionScope.user}">
+		<p>Vous êtes connecté en temps que : ${sessionScope.user.pseudo}!</p>
+	</c:if>
 
 	<c:if test="${!empty listeCodesErreur}">
 		<div class="alert alert-danger" role="alert">
@@ -26,13 +34,39 @@
 			</ul>
 		</div>
 	</c:if>
-    
-	<label for="login">Identifiant (mail ou pseudo)</label> <input type="text" id="login" name="login" />
-	<label for="mdp">mot de passe</label> <input type="password" id="mdp" name="mdp" />
+	
+<!-- NAVBAR -->
+<!-- page en mode connected et not connected. (voir pour faire un include pour plus tard.) -->
+   
+<c:choose> 
 
-	<button type="submit">se connecter</button>
+	<c:when test = "${empty sessionScope.user}">
+			 <nav class="navbar">
+		        <div class="navbar-links">
+		            <ul>
+		                <li><a href="newuser">Créer Un Compte</a></li>
+		                <li><a href="seconnecter">Se Connecter</a></li>
+		            </ul>
+		        </div>
+		    </nav>
+	</c:when>
+	
+	<c:otherwise>
+	    <nav class="navbar">
+	      <div class="navbar-links">
+	          <ul>
+	              <li><a href="Index">Enchères</a></li>
+	              <li><a href="Vendre">Vendre</a></li>
+	              <li><a href="Profil">Mon Profil</a></li>
+	              <li><a href="AccueilDeconnected">Deconnexion</a></li>
+	          </ul>
+	      </div>
+	    </nav>
+	</c:otherwise>
+	
+</c:choose>
 
-	</form>
+	<form method="post">
     
     <section class="article d-inline-flex">
         <div class="card mb-3" style="max-width: 540px;">

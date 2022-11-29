@@ -20,7 +20,7 @@ public class UtilisateurManager {
 		return instance;
 	}
 
-	public void seConnecter(String identifiant, String mdp) throws BusinessException {
+	public Utilisateur seConnecter(String identifiant, String mdp) throws BusinessException {
 		Utilisateur user = null;
 		if (identifiant.contains("@")) user = utilisateurDAO.getUtilisateurByMail(identifiant);
 		else user= utilisateurDAO.getUtilisateurByPseudo(identifiant);
@@ -30,6 +30,6 @@ public class UtilisateurManager {
 			be.ajouterErreur(CodesResultatBLL.IDENTIFIANT_KO);
 			throw be;
 		}
-
+		return user;
 	}
 }

@@ -17,7 +17,7 @@ import javax.servlet.RequestDispatcher;
 /**
  * Servlet implementation
  */
-@WebServlet("/ServletCreerUtilisateur")
+@WebServlet("/newuser")
 public class ServletCreerUtilisateur extends HttpServlet {
     private static final long serialVersionUID = 1L;
     /**

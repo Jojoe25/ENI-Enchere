@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import fr.eni.ENIEnchere.BusinessException;
 import fr.eni.ENIEnchere.bll.UtilisateurManager;
+import fr.eni.ENIEnchere.bo.Utilisateur;
 
 @WebServlet("/seconnecter")
 public class ServletSeConnecter extends HttpServlet {
@@ -29,9 +30,12 @@ public class ServletSeConnecter extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
         String identifiant = request.getParameter("login");
         String mdp = request.getParameter("mdp");
+        Utilisateur user =null;
+        
         try {
-            UtilisateurManager.getInstance().seConnecter(identifiant,mdp);
-            response.sendRedirect("https://www.google.fr");
+            user = UtilisateurManager.getInstance().seConnecter(identifiant,mdp);
+            request.getSession().setAttribute("user", user);
+            response.sendRedirect("Index");
         } catch (BusinessException e) {
             request.setAttribute("listeCodesErreur", e.getListeCodesErreur());
             request.getRequestDispatcher("WEB-INF/jsp/seconnecter.jsp").forward(request, response);
