@@ -2,9 +2,11 @@ package fr.eni.ENIEnchere.bll;
 
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.List;
 
 import fr.eni.ENIEnchere.BusinessException;
 import fr.eni.ENIEnchere.bo.ArticleVendus;
+import fr.eni.ENIEnchere.bo.StatusVente;
 import fr.eni.ENIEnchere.bo.Utilisateur;
 import fr.eni.ENIEnchere.dal.ArticleVendusDAO;
 import fr.eni.ENIEnchere.dal.DAOFactory;
@@ -120,8 +122,6 @@ public class ArticleVendusManager {
 		if(articlevendus.getNom_article()== null || articlevendus.getNom_article().length() > 30) {
 			BusinessException be = new BusinessException();
 			be.ajouterErreur(CodesResultatBLL.REGLE_ARTICLEVENDUS_NOM_ARTICLE_ERREUR);
-			throw be;
+			throw be;}
 		}
-	}
-	
 }

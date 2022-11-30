@@ -83,6 +83,8 @@ public abstract class CodesResultatBLL {
 	 * Echec le champ 'prix initial' n'est pas valide
 	 */
 	public static final int REGLE_ARTICLEVENDUS_PRIX_INITIAL_ERREUR = 20018;
+
+	public static final int REGLE_ARTICLES_ETAT_VENTE_ERREUR = 0;
 	
 	
 	

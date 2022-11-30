@@ -2,6 +2,7 @@ package fr.eni.ENIEnchere.bo;
 
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.Locale.Category;
 
 public class ArticleVendus {
 	private Integer no_article;
@@ -13,6 +14,11 @@ public class ArticleVendus {
 	private	Integer prix_vente;
 	private	Integer no_utilisateur;
 	private	Integer no_categorie;
+	private Categorie categorie;
+	private Utilisateur vendeur;
+	private StatusVente statusvente;
+	private Retrait retrait;
+
 	
 	public ArticleVendus(Integer no_article, String	nom_article, String description, LocalDate date_debut_encheres, LocalDate date_fin_encheres, Integer prix_initial, Integer prix_vente, Integer no_utilisateur, Integer no_categorie) {
 		super();
@@ -37,6 +43,20 @@ public class ArticleVendus {
 		this.no_utilisateur = no_utilisateur;
 		this.no_categorie = no_categorie;
 	}
+	public ArticleVendus(Integer no_article,String	nom_article, String description,LocalDate date_debut_encheres, LocalDate date_fin_encheres, Integer prix_initial, Integer prix_vente, Integer no_utilisateur, Integer no_categorie,Utilisateur vendeur,StatusVente statusvente,Retrait retrait) {
+		this.no_article = no_article;
+		this.nom_article = nom_article;
+		this.description = description;
+		this.date_debut_encheres = date_debut_encheres;
+		this.date_fin_encheres = date_fin_encheres;
+		this.prix_initial = prix_initial;
+		this.prix_vente = prix_vente;
+		this.no_utilisateur = no_utilisateur;
+		this.no_categorie = no_categorie;
+		this.vendeur = vendeur;
+		this.statusvente = statusvente;
+		this.retrait = retrait;
+	}
 	public Integer getNo_article() {
 		return no_article;
 	}
@@ -51,6 +71,9 @@ public class ArticleVendus {
 	}
 	public String getDescription() {
 		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	public void setPseudo(String description) {
 		this.description = description;
@@ -88,7 +111,43 @@ public class ArticleVendus {
 	public Integer getNo_categorie() {
 		return no_categorie;
 	}
-	public void setNo_categorie(Integer no_categorie) {
-		this.no_categorie = no_categorie;
+	public void setNo_categorie(Integer categorie) {
+		this.no_categorie = categorie;
 	}
+	public Utilisateur getVendeur() {
+		return vendeur;
+	}
+
+	public void setVendeur(Utilisateur vendeur) {
+		this.vendeur = vendeur;
+	}
+
+	public Retrait getRetrait() {
+		return retrait;
+	}
+
+	public void setRetrait(Retrait retrait) {
+		this.retrait = retrait;
+	}
+
+	public StatusVente getStatusVente() {
+		return statusvente;
+	}
+
+	public void setStatusVente(StatusVente statusvente) {
+		this.statusvente = statusvente;
+	}
+
+	/**
+	 * Méthode ToString 
+	 */
+	@Override
+	public String toString() {
+		return "ArticleVendu [no_article=" + no_article + ", nom_article=" + nom_article + ", description=" + description + ", date_debut_encheres="
+				+ date_debut_encheres + ", dateFinEncheres=" + date_fin_encheres + ", prix_initial=" + prix_initial
+				+ ", prix_vente=" + prix_vente + ", categorie=" + categorie + ", vendeur=" + vendeur + ", statusvente="
+				+ statusvente + ", retrait=" + retrait + "]";
+	}
+
 }
+

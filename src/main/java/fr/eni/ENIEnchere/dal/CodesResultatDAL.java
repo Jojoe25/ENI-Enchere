@@ -19,5 +19,17 @@ public abstract class CodesResultatDAL {
 	 */
 	
 	public static final int REGLE_LISTE_NOM_ERREUR = 0;
+
+	public static final int LECTURE_ARTICLES_ECHEC = 0;
+
+	public static final int UPDATE_OBJET_ECHEC = 0;
+
+	public static final int LECTURE_RETRAIT_ECHEC = 0;
+
+	public static final int DELETE_OBJET_ECHEC = 0;
+
+	public static int test;
+
+	
 	
 }

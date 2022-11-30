@@ -4,7 +4,8 @@ import fr.eni.ENIEnchere.dal.jdbc.UtilisateurDAOJdbcImpl;
 import fr.eni.ENIEnchere.dal.jdbc.ArticleVendusDAOJdbcImpl;
 import fr.eni.ENIEnchere.dal.jdbc.CategorieDAOJdbcImpl;
 import fr.eni.ENIEnchere.dal.jdbc.FormulaireDAOjdbcImpl;
-public abstract class DAOFactory {
+import fr.eni.ENIEnchere.dal.jdbc.RetraitDAOJdbcImpl;
+public  class DAOFactory {
 	
 	public static UtilisateurDAO getUtilisateurDAO()
 	{
@@ -21,6 +22,10 @@ public abstract class DAOFactory {
 	public static CategoriesDAO getCategoriesDAO()
 	{
 		return new CategorieDAOJdbcImpl();
+	}
+	public static RetraitDAO getRetraitDAO() {
+		// TODO Auto-generated method stub
+		return new RetraitDAOJdbcImpl();
 	}
 	
 	
