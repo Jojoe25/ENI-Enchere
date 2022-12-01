@@ -6,15 +6,18 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="articlevendus.css">
 <title>Met ton article en vente !</title>
 
 </head>
 
 <body>
 
-    <h3>NOUVELLE VENTE</h3>
-    <form action="ArticleVendus" method="POST">
     
+    <form action="ArticleVendus" method="POST" class=articlevendus>
+    <h3 id="titre">NOUVELLE VENTE</h3>
      <p>
         <label for="nom_article">Nom de l'article : </label>
         <input type="text" name="nom_article" id="nom_article" required><br/>
@@ -37,9 +40,8 @@
     </p>
 
     <p>
-        <label for="photos">Photo de l'article:</label>
+        <label for="photos">Photo de l'article:</label>	
         <input type="file" id="photos" name="photos" accept="image/png, image/jpeg">
-        
     </p>
 
         <label for="prix_initial">Mise à Prix:</label>
@@ -56,7 +58,7 @@
     </p>
 
 
-    <h3>RETRAIT DE L'ARTICLE :</h3>
+    <h3 id="titre">RETRAIT DE L'ARTICLE :</h3>
 
     <p>
     <label for="rue">Rue : </label>
