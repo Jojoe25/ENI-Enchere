@@ -8,7 +8,6 @@ html {
 body {
   margin:0;
   padding:0;
-  font-family: sans-serif;
   background: linear-gradient(#a79052, #5c4617);
 }
 
@@ -24,12 +23,13 @@ body {
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0,0,0,.6);
   border-radius: 10px;
+  
 }
 
 .login-box h2 {
   margin: 0 0 30px;
   padding: 0;
-  color: #fff;
+  color:#d4cfc1;
   text-align: center;
 }
 
