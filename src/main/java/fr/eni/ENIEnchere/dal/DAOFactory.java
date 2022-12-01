@@ -22,12 +22,12 @@ public  class DAOFactory {
 	public static CategoriesDAO getCategoriesDAO()
 	{
 		return new CategorieDAOJdbcImpl();
-	//}
+	}
 	//public static RetraitDAO getRetraitDAO() {
 		// TODO Auto-generated method stub
 		//return new RetraitDAOJdbcImpl();
 	//}
 	
 	
-	}}
+	}
 	
