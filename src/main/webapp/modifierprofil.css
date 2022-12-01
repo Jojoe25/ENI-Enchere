@@ -11,7 +11,7 @@ body {
     background: linear-gradient(#a79052, #5c4617);
   }
 
-h2 {
+h2, div.credit {
   text-align: center;
 }
 
@@ -49,10 +49,10 @@ h2 {
 }
 
 .btn_enregistrer {
-    justify-content: center;
     display: flex;
-    margin: auto;
-    width: 100%;
+    align-items: center;
+    justify-content: center;
+    width: 120%;
     padding: 10px 20px;
     background-color: transparent;
     border: none;
@@ -66,10 +66,10 @@ h2 {
   }
 
   .btn_supprimer {
-    justify-content: center;
     display: flex;
-    margin: auto;
-    width: 100%;
+    align-items: center;
+    justify-content: center;
+    width: 120%;
     padding: 10px 20px;
     background-color: transparent;
     border: none;
