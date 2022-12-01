@@ -1,7 +1,7 @@
 body, html{
 	overflow-x:hidden;
     height: 100vh;
-    background-color: rgb(189, 189, 189);
+	background: linear-gradient(#a79052, #5c4617);
 }
 
 .listFilter {

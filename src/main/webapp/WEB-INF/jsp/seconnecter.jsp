@@ -40,7 +40,7 @@
 		<span></span>
 		<span></span>
 		<span></span>
-		<button type="submit">Let's GO !</button>
+		<button type="submit"  >Adjugé !</button>
 		</a>
 		
 </form>
