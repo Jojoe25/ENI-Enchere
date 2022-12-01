@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
+
+
+
+html {
+    height: 120%;
+    background: linear-gradient(#a79052, #5c4617);
+}
+
+body {
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+   
+  }
+
+  
+  .articlevendus {
+    font-family: 'Poppins', sans-serif;
+    color:#d4cfc1;
+    display : flex column;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    width: 500px;
+    padding: 4%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+}
+.articlevendus [id=titre]{
+ 	font-family: 'Poppins', sans-serif;
+ 	color:#d4cfc1;	
+}
+.articlevendus input[type=text], .articlevendus input[type=number], .articlevendus input[type=date], .articlevendus input[type=file], .articlevendus textarea, .articlevendus select, .articlevendus [id=photos] {
+    display : flex column;
+    background: linear-gradient(#d4cfc1, #aa9f81);
+    width: 95%;
+    padding: 5px;
+    text-align: left;
+    border: 0;
+    outline: 0;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #696969;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-top: 16px;
+}
+
+  .articlevendus input[type=file]:hover {
+    background: #a79052;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #a79052,
+                0 0 25px #a79052,
+                0 0 50px #a79052,
+                0 0 100px #a79052;
+  }
+  .articlevendus input[type=submit] {
+  justify-content: center;
+  padding: 10px 185px;
+  color: #a79052;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  letter-spacing: 4px
+}
+.articlevendus input[type=submit]:hover {
+    background: #a79052;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #a79052,
+                0 0 25px #a79052,
+                0 0 50px #a79052,
+                0 0 100px #a79052;
+  }
