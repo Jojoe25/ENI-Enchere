@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
+
+html {
+    height: 100%;
+}
+
+body {
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(#a79052, #5c4617);
+  }
+
+h2 {
+  text-align: center;
+}
+
+.formulaire {
+    font-family: 'Poppins', sans-serif;
+    color:#d4cfc1;
+    display : flex column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+}
+
+.formulaire input[type=text], .formulaire input[type=email], .formulaire input[type=tel], .formulaire input[type=password] {
+    display : flex column;
+    background: linear-gradient(#d4cfc1, #aa9f81);
+    width: 95%;
+    padding: 10px;
+    text-align: left;
+    border: 0;
+    outline: 0;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #696969;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-top: 16px;
+}
+
+.btn_enregistrer {
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    color: #a79052;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    letter-spacing: 4px
+  }
+
+  .btn_supprimer {
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    color: #a79052;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    letter-spacing: 4px
+  }
+  
+  .btn_enregistrer:hover {
+    background: #a79052;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #a79052,
+                0 0 25px #a79052,
+                0 0 50px #a79052,
+                0 0 100px #a79052;
+  }
+
+  .btn_supprimer:hover {
+    background: #a79052;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #a79052,
+                0 0 25px #a79052,
+                0 0 50px #a79052,
+                0 0 100px #a79052;
+  }
