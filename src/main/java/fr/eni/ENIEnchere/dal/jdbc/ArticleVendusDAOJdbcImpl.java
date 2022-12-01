@@ -25,18 +25,10 @@ import fr.eni.ENIEnchere.dal.jdbc.RetraitDAOJdbcImpl;
 
 public class ArticleVendusDAOJdbcImpl implements ArticleVendusDAO {
 	private static final String INSERT_ARTICLEVENDUS = "INSERT INTO ARTICLES_VENDUS ( nom_article, description, date_debut_encheres, date_fin_encheres, prix_initial, prix_vente, no_utilisateur, no_categorie) values(?,?,?,?,?,?,1,?);";
-	private static final String GET_BY_ID = "select * from ARTICLES_VENDUS where no_article= ?";
-	private static final String GET_ALL = "select * from ARTICLES_VENDUS";
-	private static final String GET_BY_VENDEUR = "select * from ARTICLES_VENDUS where no_utilisateur= ?";
-	private static final String UPDATE = "update ARTICLES_VENDUS set nom_article = ?, description = ?,"
-				+ "							 date_debut_encheres=?, date_fin_encheres= ?, prix_initial= ?, prix_vente= ?, "
-				+ "							 no_utilisateur= ?, no_categorie=?, no_retrait=? where no_article= ? ";
-	private static final String DELETE = "delete ARTICLES_VENDUS where no_article = ?";
-	private static final String GET_BY_RETRAIT = "select * from ARTICLES_VENDUS where no_retrait=?";
 
-	private static UtilisateurDAO utilisateurDAO = new UtilisateurDAOJdbcImpl();
-	private static CategoriesDAO categorieDAO = new CategorieDAOJdbcImpl();
-	private static RetraitDAO retraitDAO = new RetraitDAOJdbcImpl();
+	//private static UtilisateurDAO utilisateurDAO = new UtilisateurDAOJdbcImpl();
+	//private static CategoriesDAO categorieDAO = new CategorieDAOJdbcImpl();
+	//private static RetraitDAO retraitDAO = new RetraitDAOJdbcImpl();
 	
 	public void insert(ArticleVendus articlevendus)throws BusinessException{
 		if(articlevendus==null)
@@ -79,7 +71,7 @@ public class ArticleVendusDAOJdbcImpl implements ArticleVendusDAO {
 			throw businessException;
 		}	
 	}
-	public ArticleVendus getById(int id) throws BusinessException {
+	/*public ArticleVendus getById(int id) throws BusinessException {
 
 		ArticleVendus articlevendus = null;
 
@@ -286,22 +278,22 @@ public class ArticleVendusDAOJdbcImpl implements ArticleVendusDAO {
 		Categorie categorieArticle = null;
 		try {
 			categorieArticle = categorieDAO.selectById(categorieId);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return categorieArticle;
-	}
-
-	private Retrait getRetraitArticle(int retraitId) {
-		RetraitDAO retraitDAO = DAOFactory.getRetraitDAO();
-		Retrait retraitArticle = null;
-		try {
-			retraitArticle = retraitDAO.getById(retraitId);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return retraitArticle;
-	}
+	*	} catch (Exception e) {
+	*		e.printStackTrace();
+	*	}
+*		return categorieArticle;
+*	}
+*
+	*private Retrait getRetraitArticle(int retraitId) {
+	*	RetraitDAO retraitDAO = DAOFactory.getRetraitDAO();
+	*	Retrait retraitArticle = null;
+	*	try {
+		*	retraitArticle = retraitDAO.getById(retraitId);
+		*} catch (Exception e) {
+		*	e.printStackTrace();
+	*	}
+		*return retraitArticle;
+	*/
 
 }
 	

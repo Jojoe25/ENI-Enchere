@@ -10,7 +10,7 @@ import fr.eni.ENIEnchere.bo.Retrait;
 public interface ArticleVendusDAO {
 
 	public void insert(ArticleVendus articlevendus) throws BusinessException;
-	public static ArticleVendus getById(int id) throws BusinessException {
+	/*public static ArticleVendus getById(int id) throws BusinessException {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -27,5 +27,5 @@ public interface ArticleVendusDAO {
 		
 	}
 	public void delete (int id) throws BusinessException;
-	public List<ArticleVendus> getByRetrait(Retrait retrait) throws BusinessException;
+	public List<ArticleVendus> getByRetrait(Retrait retrait) throws BusinessException;*/
 }
