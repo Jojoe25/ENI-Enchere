@@ -21,7 +21,10 @@
 
 <%@ include file = "navbar.jsp" %>
 
-	<h1 class="display-1 text-center">ENCHERE ET EN OS</h1>
+  <div id="cont1" class="cont1 container-fluid">
+	<img src="img/LOGO.png"alt="logo">
+	<h1>ENCHERE ET EN OS</h1>
+  </div>
 
 	<c:if test="${ !empty sessionScope.user}">
 		<p>Vous êtes connecté en temps que : ${sessionScope.user.pseudo}!</p>
@@ -38,10 +41,9 @@
 		</div>
 	</c:if>
 
+<div id="cont2" class="cont2 container-fluid">
 
-	
 	<c:choose>
-
 		<c:when test="${empty sessionScope.user}">
 			<h2 class="titre">Liste des enchères</h2>
 			<form action="Index" method="post">
@@ -144,7 +146,7 @@
 			</form>
 		</c:otherwise>
 	</c:choose>
-
+</div>
 
 	<section class="article d-inline-flex">
 		<div class="card mb-3" style="max-width: 540px;">

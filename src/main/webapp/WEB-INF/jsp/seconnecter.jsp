@@ -12,7 +12,6 @@
 <body>
 
 	<form method="post">
-
 		<c:if test="${!empty listeCodesErreur}">
 			<div class="alert alert-danger" role="alert">
 				<strong>Erreur!</strong>

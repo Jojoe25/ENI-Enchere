@@ -1,7 +1,19 @@
-body, html{
+body,html {
 	overflow-x:hidden;
     height: 100vh;
 	background: linear-gradient(#a79052, #5c4617);
+}
+
+.cont1 {
+	display: flex;
+	justify-content: center;
+	height:150px;
+}
+
+.cont1 h1{
+	padding: 25px;
+	font-size: 5em;
+	align-self: center;
 }
 
 .listFilter {
