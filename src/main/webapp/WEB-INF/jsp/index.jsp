@@ -22,7 +22,7 @@
 <%@ include file = "navbar.jsp" %>
 
   <div id="cont1" class="cont1 container-fluid">
-	<img src="img/LOGO.png"alt="logo">
+	<img src="img/LOGO_sans_titre.png"alt="logo">
 	<h1>ENCHERE ET EN OS</h1>
   </div>
 
