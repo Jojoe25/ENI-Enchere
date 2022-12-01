@@ -23,10 +23,12 @@
 				</ul>
 			</div>
 		</c:if>
-		
+	</form>
+	
 <div class="login-box">
 <h2>Login</h2>
-<form>
+
+<form method="post">
 		<div class="user-box">
 		<input type="text" id="login" name="login" required=""/>
 		<label for="login">Identifiant</label>
@@ -35,14 +37,13 @@
 		<input type="password" id="mdp" name="mdp" required=""/>
 		<label for="mdp">Mot de passe</label> 
 		</div>
-		<a href="submit">
+		<a>
 		<span></span>
 		<span></span>
 		<span></span>
 		<span></span>
-		<button type="submit"  >Adjugé !</button>
+		<button type="submit" class="action-button">ADJUGÉ</button>
 		</a>
-		
 </form>
 </div>
 

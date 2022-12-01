@@ -28,15 +28,6 @@ body {
   text-align: center;
 }
 
-.login-box button {
-  margin: 0 0 30px;
-  padding: 0;
-  text-align: center;
-  justify-content: center;
-  text-align: center;
-}
-
-
 .login-box .user-box {
   position: relative;
 }
@@ -57,7 +48,7 @@ body {
   top:0;
   left: 0;
   padding: 10px 0;
-  font-size: 16px;
+  font-size: 20px;
   color: #fff;
   pointer-events: none;
   transition: .5s;
@@ -72,8 +63,8 @@ body {
 }
 
 .login-box form a {
-  position: d-flex;
-  display: inline-block;
+  justify-content: center;
+  display: flex;
   padding: 10px 20px;
   color: #03e9f4;
   font-size: 16px;
@@ -81,10 +72,7 @@ body {
   text-transform: uppercase;
   overflow: hidden;
   transition: .5s;
-  margin-top: 40px;
-  letter-spacing: 4px;
-  justify-content: center;
-  text-align: center;
+  letter-spacing: 4px
 }
 
 .login-box a:hover {
@@ -168,4 +156,20 @@ left: -100%;
   50%,100% {
     bottom: 100%;
   }
+} 
+
+button {
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  width: 200px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
 }
+
