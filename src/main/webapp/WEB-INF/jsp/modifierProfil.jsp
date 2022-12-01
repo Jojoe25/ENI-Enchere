@@ -16,7 +16,7 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	crossorigin="anonymous">
-<link rel="stylesheet" href="formulaire.css">
+<link rel="stylesheet" href="modifierprofil.css">
 
 </head>
 
@@ -68,7 +68,8 @@
 		</div>
 		<div class="btn">
 			<input class="btn_enregistrer" type="submit" name="enregistrer"
-				value="Enregistrer"> <input class="btn_supprimer"
+				value="Enregistrer"> <br/>
+			<input class="btn_supprimer"
 				type="submit" name="supprimerUser" value="Supprimer mon compte">
 		</div>
 	</form>
