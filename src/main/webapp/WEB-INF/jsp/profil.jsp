@@ -11,47 +11,27 @@
 	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Enchere et en os ! / Mon profil</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="profil.css">
 	</head>
 
 <body>
 
      <!-- Navbar -->
      
-<c:choose> 
-
-	<c:when test = "${empty sessionScope.user}">
-			 <nav class="navbar">
-		        <div class="navbar-links">
-		            <ul>
-		                <li><a href="newuser">Créer Un Compte</a></li>
-		                <li><a href="seconnecter">Se Connecter</a></li>
-		            </ul>
-		        </div>
-		    </nav>
-	</c:when>
-	
-	<c:otherwise>
-	    <nav class="navbar">
-	      <div class="navbar-links">
-	          <ul>
-	              <li><a href="Index">Enchères</a></li>
-	              <li><a href="Vendre">Vendre</a></li>
-	              <li><a href="Profil">Mon Profil</a></li>
-	              <li><a href="AccueilDeconnected">Deconnexion</a></li>
-	          </ul>
-	      </div>
-	    </nav>
-	</c:otherwise>
-	
-</c:choose>
+<%@ include file = "navbar.jsp" %>
  	
-      <!--Head-->
-      <div class="head">
-        <h1>Profil utilisateur : ${sessionScope.user.pseudo}!</h1>
-      </div>
-
-		<form action="avoir." method="POST">
+	<div class="container justify-content-center align-items-center">
+	
+	     <!--Head-->
+	     <div class="head">
+	       <h1>Profil utilisateur : ${sessionScope.user.pseudo}!</h1>
+	     </div>
+	      
+		<form action="Profil" method="POST">
+		
+		
+		
+		
 			<div class="center">
 				<p><span class="ChampProfil" >Pseudo : </span><span class="model" >${user.pseudo}</span></p>
 			</div>
@@ -77,23 +57,14 @@
 				<p><span class="ChampProfil">Ville : </span><span class="model" >${user.ville}</span></p>
 			</div>
 		</form>
+		
+		<c:if test= "${sessionScope.user.pseudo == requestScope.user.pseudo}">          	    
+		<div>
+		<a href="modifierProfil" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Modifier mon compte</a> 
+	    </div>
+		</c:if>
+		
+	</div>	
 	        
-	  	<c:if test= "${sessionScope.user.pseudo == requestScope.user.pseudo}">      
-	        	    
-		<div class=btn-large>
-	    	<form action="updateProfil" method="post">
-	    		<input class="btn" type="submit" name="buttonUpdate" value="Modifier mon compte"/>
-	    	</form>       
-	    </div>
-	    <div class=btn-large>
-	    	<form action="deleteProfil" method="post">
-	    		<input class="btn" type="submit" name="buttonDelete" value="Supprimer mon compte"/>
-	    	</form>       
-	    </div>
-	    
-	    </c:if>
-	    
-	</section>
-
 </body>
 </html>

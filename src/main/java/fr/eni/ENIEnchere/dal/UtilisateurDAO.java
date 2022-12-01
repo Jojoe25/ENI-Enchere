@@ -8,5 +8,5 @@ public interface UtilisateurDAO {
 	public Utilisateur getUtilisateurByPseudo(String pseudo) throws BusinessException;
 	public Utilisateur getUtilisateurByMail(String mail) throws BusinessException;
 	public Utilisateur getUtilisateurByID(int vendeurId) throws BusinessException;
-	
+	public void updateById(Utilisateur user) throws BusinessException;
 }

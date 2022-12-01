@@ -21,7 +21,7 @@ import fr.eni.ENIEnchere.bo.ArticleVendus;
 /**
  * Servlet implementation class ServletArticleVendus
  */
-@WebServlet("/ServletArticleVendus")
+@WebServlet("/ArticleVendus")
 public class ServletArticleVendus extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

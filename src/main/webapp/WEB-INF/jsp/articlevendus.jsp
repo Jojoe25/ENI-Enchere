@@ -13,7 +13,7 @@
 <body>
 
     <h3>NOUVELLE VENTE</h3>
-    <form action="ServletArticleVendus" method="POST">
+    <form action="ArticleVendus" method="POST">
     
      <p>
         <label for="nom_article">Nom de l'article : </label>

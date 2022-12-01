@@ -6,6 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+		<link rel="stylesheet" href="seconnecter.css">
 <title>se Connecter</title>
 </head>
 <body>
@@ -22,13 +23,28 @@
 				</ul>
 			</div>
 		</c:if>
-
-		<label for="login">Identifiant (mail ou pseudo)</label> <input type="text" id="login" name="login" />
-		<label for="mdp">mot de passe</label> <input type="password" id="mdp" name="mdp" />
-
-		<button type="submit">se connecter</button>
-
-	</form>
+		
+<div class="login-box">
+<h2>Login</h2>
+<form>
+		<div class="user-box">
+		<input type="text" id="login" name="login" required=""/>
+		<label for="login">Identifiant</label>
+		</div>
+		<div class="user-box">
+		<input type="password" id="mdp" name="mdp" required=""/>
+		<label for="mdp">Mot de passe</label> 
+		</div>
+		<a href="submit">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<button type="submit">Let's GO !</button>
+		</a>
+		
+</form>
+</div>
 
 </body>
 </html>
