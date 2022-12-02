@@ -6,7 +6,7 @@
 			<nav class="navbar d-flex justify-content-end">
 				<div class="navbar-links">
 					<ul>
-						<li><a href="newuser">Créer Un Compte</a></li>
+						<li><a href="newuser">Créer Un Compte</a></li></br>
 						<li><a href="seconnecter">Se Connecter</a></li>
 					</ul>
 				</div>
@@ -17,9 +17,9 @@
 			<nav class="navbar d-flex justify-content-end">
 				<div class="navbar-links">
 					<ul>
-						<li><a href="Index">Enchères</a></li>
-						<li><a href="ArticleVendus">Vendre</a></li>
-						<li><a href="Profil">Mon Profil</a></li>
+						<li><a href="Index">Enchères</a></li></br>
+						<li><a href="ArticleVendus">Vendre</a></li></br>
+						<li><a href="Profil">Mon Profil</a></li></br>
 						<li><a href="AccueilDeconnected">Deconnexion</a></li>
 					</ul>
 				</div>
