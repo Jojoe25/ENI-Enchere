@@ -61,7 +61,7 @@
 					name="new_mot_de_passe_confirmation"
 					placeholder="Confirmez le nouveau mot de passe">
 				<div class="credit">
-					<br/><p>Vos Crédits : ${user.credit}points</p>
+					<br/><p>Vos Crédits : ${user.credit} points</p>
 				</div>
 			</div>
 
