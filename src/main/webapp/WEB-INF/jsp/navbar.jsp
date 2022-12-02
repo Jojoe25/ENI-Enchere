@@ -1,8 +1,7 @@
 	<!-- NAVBAR -->
 	<!-- page en mode connected et not connected. -->
-
+    
 <c:choose>
-
 		<c:when test="${empty sessionScope.user}">
 			<nav class="navbar d-flex justify-content-end">
 				<div class="navbar-links">
