@@ -73,3 +73,30 @@ color: #fff;
 .col{
 	padding: 5px;
 }
+
+.cont2 .btn_rechercher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120%;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    color: #a79052;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    letter-spacing: 4px
+  }
+  
+   .cont2 .btn_rechercher:hover {
+    background: #a79052;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #a79052,
+                0 0 25px #a79052,
+                0 0 50px #a79052,
+                0 0 100px #a79052;
+  }
