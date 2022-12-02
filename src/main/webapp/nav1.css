@@ -1,5 +1,5 @@
 .navbar a {
-	justify-content: center;
+	justify-content: right;
 	padding: 10px;
 	color: #fff;
 	font-size: 14px;
@@ -25,6 +25,5 @@
 .navbar-links, ul {
 	display: flex;
 	flex-direction: column;
-	justify-content: left;
-	text-align: center;
+	text-align: right;
 }

@@ -11,6 +11,7 @@
 	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Enchere et en os ! / Mon profil</title>
 		<link rel="stylesheet" href="profil.css">
+		<link rel="stylesheet" href="nav1.css">
 	</head>
 
 <body>
