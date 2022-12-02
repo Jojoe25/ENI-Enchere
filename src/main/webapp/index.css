@@ -4,7 +4,17 @@ body,html {
 	background: linear-gradient(#a79052, #5c4617);
 }
 
+h1{
+color: #fff;
+}
+
 .cont1 {
+	display: flex;
+	justify-content: center;
+	height:150px;
+}
+
+.cont1 a{
 	display: flex;
 	justify-content: center;
 	height:150px;
@@ -16,20 +26,47 @@ body,html {
 	align-self: center;
 }
 
-.listFilter {
+.cont2 {
+	margin: 15px;
+  	display : flex column;
+  	justify-content: left;
+  	width: 570px;
+ 	padding: 10px;
+ 	background: rgba(0,0,0,.5);
+ 	box-sizing: border-box;
+ 	box-shadow: 0 15px 25px rgba(0,0,0,.6);
+ 	border-radius: 10px;
+}
+
+.cont2 .titre{
+	  color: #fff;
+	display: flex;
+	padding: 5px;
+	font-size: 2em;
+}
+
+.cont2 .listFilter {
     display: flex;
-    flex-wrap: wrap;
-    margin: 25px;
+    margin: 10px;
+      color: #fff;
 }
 
-.achats {
+.cont2 .desc {
+      color: #fff;
+}
+
+.cont2 .achats {
     padding: 25px;
 }
 
-.ventes {
+.cont2 .ventes {
     padding: 25px;
 }
 
-.navbar-links li {
-    list-style: none;
+.cont3 {
+	padding: 20px;
+}
+
+.col{
+	padding: 5px;
 }
