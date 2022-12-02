@@ -36,7 +36,7 @@
 	<form action="newuser" method="POST" class="formulaire">
 		<h2>Modifiez votre profil</h2>
 		<div class="container">
-			<ul class="flex-outer">
+			<div class="flex-outer">
 				<input class="input" type="text" name="pseudo"
 					value="${user.pseudo}" placeholder="Pseudo">
 				<input class="input" type="text" name="nom" value="${user.nom}"
@@ -60,10 +60,10 @@
 				<input class="input" type="password"
 					name="new_mot_de_passe_confirmation"
 					placeholder="Confirmez le nouveau mot de passe">
-				<br/><li class="credit">
-					<p>Vos Crédit : ${user.credit}points</p>
-				</li>
-			</ul>
+				<div class="credit">
+					<br/><p>Vos Crédit : ${user.credit}points</p>
+				</div>
+			</div>
 
 		</div>
 		<div class="btn">
